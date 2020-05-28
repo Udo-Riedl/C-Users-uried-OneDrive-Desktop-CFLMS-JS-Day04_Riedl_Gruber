@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic1practice</title>
+</head>
+
+<body>
+
+    <form name="myform">
+        <div>
+            Enter first name: <br>
+            <input id="firstname" type="text" name="firstname">
+        </div>
+
+        <div>
+            Enter last name: <br>
+            <input id="lastname" type="text" name="lastname">
+        </div>
+
+        <div>
+            Enter age: <br>
+            <input id="age" type="text" name="age">
+        </div>
+
+        <button type="button" onclick="inputData()">Submit</button>
+
+    </form>
+
+    <div id="demo"></div>
+
+</body>
+
+<script>
+    function inputData(firstname, lastname, age) {
+        var firstname = document.getElementById("firstname").value;
+        var lastname = document.getElementById("lastname").value;
+        var fullname = firstname + lastname;
+        var age = document.getElementById("age").value;
+        if (firstname.length > 5 && lastname.length > 6) {
+            document.getElementById("demo").style.backgroundColor = "red";
+        } else {
+            document.getElementById("demo").style.backgroundColor = "green";
+        }
+
+
+        document.getElementById("demo").innerHTML = "My name is " + firstname + " " + lastname + " and I am " + age + " years old";
+    }
+</script>
+
+
+
+<!--
+<script>
+    function submitdata() {
+        var firstname = document.forms["myform"]["firstname"].value;
+        var lastname = document.forms["myforms"]["lastname"].value;
+
+        var fullname = firstname + lastname;
+
+        var result = document.getElementById("demo");
+        result.innerHTML = fullname;
+    }
+</script> 
+
+
+
+
+
+<script>
+    var myForm = document.querySelector('#myform');
+    var firstname = document.querySelector("#firstname");
+    var lastname = document.querySelector("#lastname");
+    var age = document.querySelector("#age");
+
+    myForm.addEventListener('submit', onsubmit);
+
+    function onSubmit(e) {
+        if (firstname.length > 5) {
+            document.getElementById("firstname").style.color = "red";
+            const li = document.createElement("p");
+            p.appendChild(document.createTextNode(firstname.value + lastname.value));
+            demo.appendChild(p);
+
+        } else {
+            document.getElementById("firstname").style.color = "green";
+
+
+        }
+
+    }
+</script>
+-->
+
+</html>
