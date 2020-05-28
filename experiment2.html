@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Basic 1</title>
+</head>
+<body>
+	<form>
+		<p>Enter first Name:</p>
+		<input id="firstName" type="text" name="first Name" value="">
+		<p>Enter last Name</p>
+		<input id="lastName" type="text" name="last Name" value="">
+		<p>Age</p>
+		<input id="age" type="text" name="age" value="">
+	</form>
+
+	<!--<div class="demo">
+		
+	</div>-->
+
+	<script>
+		class Person { 
+			document.getElementById('firstName');
+			document.getElementById('lastName');
+			document.getElementById('age');
+			
+		constructor(firstName, lastName , age) {
+			this.firstName = firstName;
+			this.lastName = lastName;
+			this.age = age;
+		}
+		name() {
+			return 'My name is ' + this.firstName + ' ' + this.lastName;	
+		}
+		age() {
+			return 'I am ' + this.age + ' ' + 'years old';
+		}
+		whoAreYou() {
+			return 'Hi , ' + this.name() + ' ' + this.age();
+		}
+	}
+	</script>
+
+</body>
+</html>
