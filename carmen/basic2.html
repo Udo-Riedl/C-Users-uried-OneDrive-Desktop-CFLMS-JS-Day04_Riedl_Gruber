@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic1practice</title>
+</head>
+
+<body>
+    <form>
+        Enter first name:
+        <input id="firstname" type="text" name="firstname"> Enter last name:
+        <input id="lastname" type="text" name="lastname"> Enter age:
+        <input id="age" type="text" name="age">
+        <select id="profession" name="profession">
+            <option value ="Education">Education</option>"
+            <option value = "IT">IT</option>
+            <option value = "Business">Business</option>
+            <option value = "Consulting">Consulting</option>
+        </select>
+        <br>
+
+        <button type="button" onclick="personalData()">Submit</button>
+
+
+    </form>
+
+    <div id="demo"></div>
+
+    <script>
+        function personalData() {
+            var firstname = document.getElementById("firstname").value;
+            var lastname = document.getElementById("lastname").value;
+            var fullname = firstname + lastname;
+            var profession = document.getElementById("profession").value;
+            var age = document.getElementById("age").value;
+
+            console.log(profession);
+            console.log(fullname);
+
+            if (profession == "Education") {
+                document.getElementById("demo").style.backgroundColor = "yellow";
+
+            } else if (profession == "IT") {
+                document.getElementById("demo").style.backgroundColor = "green";
+            } else {
+                document.getElementById("demo").style.backgroundColor = "grey";
+            }
+
+
+
+            if (fullname.length > 10) {
+                document.getElementById("demo").style.color = "blue";
+
+            } else {
+                document.getElementById("demo").style.color = "red";
+            }
+
+
+            document.getElementById("demo").innerHTML = (firstname + " " + lastname + " : " + age + " years old" + ": " + profession);
+        }
+    </script>
+
+
+</body>
