@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel</title>
+</head>
+<div id="demo"></div>
+
+
+<body>
+
+    <script>
+        Math.random();
+        NumberofNights = Math.round(Math.random() * 11)
+        console.log(NumberofNights);
+
+        class Hotel {
+            hotelName = "";
+            Usernights = Number;
+            Address = "";
+
+            constructor(hotelName, userNights, Address) {
+                this.hotelName = hotelName;
+                this.userNights = userNights;
+                this.Address = Address;
+            }
+            showAvailability() {
+                if (NumberOfNights >= this.userNights) {
+                    return true;
+                } else {
+                    return false;
+                };
+            }
+        }
+
+        var hotel1 = new Hotel("Hilton", 5, "5 Main St.");
+        var hotel2 = new Hotel("Radison", 10, "10 Lake St.");
+        var hotel3 = new Hotel("DoubleTree", 8, "90 Tree Dr.")
+        var hotels = [hotel1, hotel2, hotel3];
+
+        console.log(hotel2.Address);
+
+
+        if showAvailability()
+        alert("Sorry, no available nights for" + hotel1.hotelName);
+        }
+        else {
+            alert("You're good to go, I'll reserve!");
+        }
+    </script>
+</body>
+
+</html>
